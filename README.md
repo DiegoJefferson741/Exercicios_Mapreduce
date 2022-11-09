@@ -1,2 +1,20 @@
 # Exercicios_Mapreduce
 Comandos e Exercicios MapReduce
+
+
+cd Downloads/
+
+
+export HADOOP_CLASSPATH=${JAVA_HOME}/lib/tools.jar
+
+
+hadoop com.sun.tools.javac.Main WordCount.java
+
+
+jar cf wc.jar WordCount*.class
+
+hadoop jar wc.jar WordCount big.txt out3
+
+hadoop fs -copyToLocal out3
+
+hadoop fs -rm -R out3
